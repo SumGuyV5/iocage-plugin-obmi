@@ -4,6 +4,7 @@ IP_ADDRESS=$(ifconfig | grep -E 'inet.[0-9]' | grep -v '127.0.0.1' | awk '{ prin
 fetch https://github.com/Thefrank/freebsd-port-sooners/releases/download/20211129/ombi-4.7.4.pkg
 
 pkg install -y ombi-4.7.4.pkg
+rm ombi-4.7.4.pkg
 
 ln -s /usr/local/lib/libsqlite3.so /usr/local/lib/libe_sqlite3
 
