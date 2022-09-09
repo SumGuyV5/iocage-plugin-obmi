@@ -1,8 +1,8 @@
 #!/bin/sh -x
 IP_ADDRESS=$(ifconfig | grep -E 'inet.[0-9]' | grep -v '127.0.0.1' | awk '{ print $2}')
 
-VERISON=4.7.11
-DATE=20211221
+VERISON=4.25.0
+DATE=20220902
 
 fetch https://github.com/Thefrank/freebsd-port-sooners/releases/download/${DATE}/ombi-${VERISON}.pkg
 
