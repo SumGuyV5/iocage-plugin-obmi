@@ -6,6 +6,9 @@ DATE=20230416
 
 fetch https://github.com/Thefrank/freebsd-port-sooners/releases/download/${DATE}/ombi-${VERISON}.pkg
 
+# need to manual create ombi user. new pkg broken?
+pw adduser ombi -g ombi -d /nonexistent -s /usr/sbin/nologin -c "Ombi Daemon" -u 363
+
 pkg install -y ombi-${VERISON}.pkg
 rm ombi-${VERISON}.pkg
 
